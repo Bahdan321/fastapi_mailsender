@@ -1,4 +1,4 @@
-from schemas import MailBody
+from view.mailer.schemas import MailBody
 from other.mailer import send_mail
 
 from fastapi import APIRouter, BackgroundTasks
