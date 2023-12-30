@@ -6,7 +6,7 @@ from routers import main_api_router
 
 
 app = FastAPI(
-    title="Ygolok"
+    title="Email Sender"
 )
 
 app.include_router(main_api_router)

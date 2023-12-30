@@ -10,7 +10,7 @@ def send_mail(data:dict|None=None):
     message = MIMEText(msg.body, "html")
     message["From"] = USERNAME
     message["To"] = ",".join(msg.to)
-    message["Subject"] = msg.Subject
+    message["Subject"] = msg.subject
 
     ctx = create_default_context()
 
