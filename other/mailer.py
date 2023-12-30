@@ -1,11 +1,13 @@
-from config import HOST, USERNAME, PASSWORD, PORT, MailBody
+from config import HOST, USERNAME, PASSWORD, PORT
+from view.mailer.schemas import MailBody
+
 from ssl import create_default_context
 from email.mime.text import MIMEText
 from smtplib import SMTP
 
 def send_email(data:dict|None=None):
     msg = MailBody(**data)
-    message = MIMEText(msg.bodym, "html")
+    message = MIMEText(msg.body, "html")
     message["From"] = USERNAME
     message["To"] = ",".join(msg.to)
     message["Subject"] = msg.Subject

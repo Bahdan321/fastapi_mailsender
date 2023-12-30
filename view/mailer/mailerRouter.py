@@ -1,3 +1,5 @@
+from schemas import MailBody
+
 from fastapi import APIRouter
 
 mailer_router = APIRouter()
