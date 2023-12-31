@@ -16,7 +16,6 @@ def send_mail(data:dict|None=None):
 
     try:
         with SMTP(HOST,PORT) as server:
-            server.starttls()
             server.ehlo()
             server.starttls(context=ctx)
             server.ehlo()
